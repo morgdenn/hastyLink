@@ -1,15 +1,15 @@
-javascript:var defaultEmail = 'morgdenn@gmail.com',
-	Q = '',
+javascript:var Q = '',
 	x = document,
-	y = window;
+	y = window
+	defaultEmail = 'morgan@dennithorne.com';
 
 /* If you have text selected, put that in the email body. */
-if (x.selection) {
-	Q = x.selection.createRange().text;
+if (document.selection) {
+	Q = document.selection.createRange().text;
 } else if (y.getSelection) {
 	Q = y.getSelection();
-} else if (x.getSelection) {
-	Q = x.getSelection();
+} else if (document.getSelection) {
+	Q = document.getSelection();
 }
 
 /* If there is no selected text, use the page description in the email body. */
