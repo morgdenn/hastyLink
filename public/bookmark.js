@@ -1,4 +1,5 @@
 (function () {
+  var default_to = '{{default_to}}';
   var body = '';
 
   // Has any text been selcted
@@ -17,11 +18,14 @@
     .replace(/(\xbb|\xa0|\0|\n|\f|\r|\t|\v)/gim, ' ');
 
   window.open(
-    'mailto:?subject=' +
+    'mailto:?' +
+      '&to=' +
+      default_to +
+      '&subject=' +
       encodeURIComponent(subject) +
       '&body=' +
       encodeURIComponent(body) +
-      escape('\r\n') +
+      escape('\r\n\r\n') +
       encodeURIComponent(window.location.href),
     '_blank'
   );

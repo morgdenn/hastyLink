@@ -1,21 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+
+import BookmarkBtn from './BookmarBtn';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+    <div className="container">
+      <h1 className="display-1 text-center">Hasty Link</h1>
 
-        <a
-          className="App-link"
-          href="javascript:!function(){var e='';window.getSelection&&(e=window.getSelection().toString()),0===e.length&&document.getElementsByName('description')[0]&&(e=document.getElementsByName('description')[0].getAttribute('content'));var n=document.title.replace('«',' ').replace(/(\xbb|\xa0|\0|\n|\f|\r|\t|\v)/gim,' ');window.open('mailto:?subject='+encodeURIComponent(n)+'&body='+encodeURIComponent(e)+escape('\r\n')+encodeURIComponent(location.href),'_blank')}();"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hasty Link
-        </a>
-      </header>
+      <div className="text-center mt-5">
+        <p>Drag the blue button onto your bookmarks bar.</p>
+      </div>
+      <BookmarkBtn />
+
+      <div className="App"></div>
     </div>
   );
 }
