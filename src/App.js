@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-import BookmarkBtn from './BookmarBtn';
+import BookmarkBtn from './BookmarkBtn';
 
 function App() {
   return (
