@@ -1,5 +1,5 @@
 (function () {
-  var default_to = '{{default_to}}';
+  var default_to = '';
   var body = '';
 
   // Has any text been selcted
